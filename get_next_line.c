@@ -6,7 +6,7 @@
 /*   By: mmanley <mmanley@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/29 22:22:39 by mmanley           #+#    #+#             */
-/*   Updated: 2018/01/03 21:51:00 by mmanley          ###   ########.fr       */
+/*   Updated: 2018/01/04 12:30:19 by mmanley          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ int					get_next_line(const int fd, char **line)
 			return (-1);
 		str[eof] = '\0';
 		if ((s = ft_strrealloc(s, str)) == NULL)
-			return (0);
+			return (-1);
 		if ((start = check_newline(s, eof)) > 0)
 		{
 			*line = func_call(&s, *line, start, eof);
